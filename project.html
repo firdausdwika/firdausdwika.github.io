@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<h1>Project</h1>
+
+<ul>
+	{% for project in site.categories.Android %}
+	<li>
+		<a href="">{{project.title}}</a>
+		<p>{{project.meta}}</p>
+	</li>
+	{% endfor %}
+</ul>
