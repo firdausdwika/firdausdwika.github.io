@@ -1,5 +1,73 @@
----
+<!--
 layout: default
----
 <h1>Hello World</h1>
 <p>I'm Firdaus Dwika.</p>
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Firdaus Dwika | Coming Soon</title>
+	<style type="text/css">
+		.animate-bottom {
+			position: relative;
+			-webkit-animation-name: animatebottom;
+			-webkit-animation-duration: 1s;
+			-o-animation-name: animatebottom;
+			-o-animation-duration: 1s;
+			-moz-animation-name: animatebottom;
+			-moz-animation-duration: 1s;
+			animation-name: animatebottom;
+			animation-duration: 1s;
+		}
+
+		@-webkit-keyframes animatebottom{
+			from { bottom: -100px; opacity: 0 }
+			to { bottom: 0; opacity: 1 }
+		}
+
+		@-o-keyframes animatebottom{
+			from { bottom: -100px; opacity: 0 }
+			to { bottom: 0; opacity: 1 }
+		}
+
+		@-moz-keyframes animatebottom{
+			from { bottom: -100px; opacity: 0 }
+			to { bottom: 0; opacity: 1 }
+		}
+		@keyframes animatebottom{
+			from { bottom: -100px; opacity: 0 }
+			to { bottom: 0; opacity: 1 }
+		}
+
+		#myDiv {
+			display: none;
+			text-align: center;
+		}
+	</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader">
+	<img src="logo.svg">
+</div>
+
+<div style="display:none" id="myDiv" class="animate-bottom">
+	<h3>Coming Soon...</h3>
+</div>
+
+<script>
+	var myVar;
+
+	function myFunction() {
+		myVar = setTimeout(showPage,3000);
+	}
+
+	function showPage(){
+		getElementById("loader").style.display = "none";
+		getElementById("myDiv").style.display = "block";
+	}
+</script>
+
+</body>
+</html>

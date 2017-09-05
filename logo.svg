@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 181 119.9" style="enable-background:new 0 0 181 119.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#190B0B;stroke-width:3;stroke-miterlimit:5;}
+</style>
+<defs>
+	<style>
+		.st0 {
+			stroke-dasharray:200;
+			stroke-dashoffset:0;
+			-webkit-animation: dash 7s linear forwards;
+			-o-animation: dash 7s linear forwards;
+			-moz-animation: dash 7s linear forwards;
+			animation: dash 7s linear forwards;
+		}
+
+		@-webkit-keyframes dash{
+			from {
+				stroke-dashoffset:1200;
+			}
+			to{
+				stroke-dashoffset:0;
+			}
+		}
+
+		path {
+			animation-duration: 1s;
+			animation-name: dash;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+		}
+	</style>
+</defs>
+<path id="XMLID_6_" class="st0" d="M181,58.8c-0.1-8-0.6-27.1-11.5-41.3S142.8,0.1,133,0H0v119.9h34.8V64.1h37v-12h-37V12h43.4
+	v107.9h51.1c0,0,26.8-0.1,39.2-16.5C180.9,87,181.1,66.8,181,58.8z M143.4,76.7c-0.9,11.1-2.7,18.7-3.9,22.1s-7.3,10.2-12.2,10.5
+	c-4.9,0.3-1.3,0.6-15,0.9V9.9c0,0,13.3-1.1,19.6,2.5c6.3,3.6,8.9,13.3,8.9,13.3s2.3,9.6,2.6,17.9C143.7,52,144.3,65.6,143.4,76.7z"
+	>
+</path>
+</svg>
