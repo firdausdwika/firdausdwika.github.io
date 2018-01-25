@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Firdaus Dwika</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+    <meta content="Firdaus Dwika" name="description" />
+    <meta content="Firdaus Dwika" name="author" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/apps.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeit/5.0.1/typeit.min.js"></script>
+</head>
+<body>
+<body onload="myFunction()">
+<div id="splash" class="splash">
+    <div class="col-md-12 splash-hello">
+        <h1 class="hello"></h1>
+    </div>
+</div>
+<div class="aboutnav" id="aboutnav">
+    <div class="row">
+        <div class="col-lg-1 col-md-1">
+            <h2 class="close" id="close"><a onclick="closeAbout()">close</a></h2>
+        </div>
+        <div class="col-lg-11 col-md-11">
+
+        </div>
+    </div>
+</div>
+<div id="home" class="home">
+    <div class="row">
+        <div class="col-lg-1 col-md-1">
+            <h2 class="about" id="about"><a onclick="openAbout()">about</a></h2>
+        </div>
+        <div class="col-lg-5 col-md-5">
+
+        </div>
+        <div class="col-lg-5 col-md-5">
+            <h3 class="hello-home">Hello,<br>I'm Firdaus Dwika</h3>
+        </div>
+        <div class="col-lg-1 col-md-1">
+
+        </div>
+    </div>
+</div>
+<footer>
+    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        new TypeIt('.hello', {
+            // strings: 'Delima Kav. 66, Dau, Malang - East Java, Indonesia',
+            speed: 100,
+            autoStart: false,
+            cursor: false
+        })
+            .type('Hllo')
+            .pause(500)
+            .delete(3)
+            .type('ello, ')
+            .break() .pause(900)
+            .type('I\'m <strong>Firdaus Dwika</strong>');
+
+        new TypeIt('.hello-home', {
+            // strings: 'Delima Kav. 66, Dau, Malang - East Java, Indonesia',
+            speed: 100,
+            autoStart: false,
+            startDelay:7000,
+            cursor: false
+        });
+
+    </script>
+    <script>
+        var myVar;
+
+        function myFunction() {
+            myVar = setTimeout(showPage,6000);
+        }
+
+        function showPage(){
+            document.getElementById("home").setAttribute('style','transition: 1s;');
+            document.getElementById("splash").style.display = "none";
+            document.getElementById("home").style.display = "block";
+            document.getElementById("home").style.position = "absolute";
+        }
+        function openAbout() {
+            document.getElementById("aboutnav").style.width = "100%";
+            document.getElementById("about").style.display = "none";
+            document.getElementById("close").style.display = "block";
+        }
+        function closeAbout() {
+            document.getElementById("aboutnav").style.width = "0%";
+            document.getElementById("about").style.display = "block";
+            document.getElementById("close").style.display = "none";
+        }
+    </script>
+</footer>
+</body>
+</html>
