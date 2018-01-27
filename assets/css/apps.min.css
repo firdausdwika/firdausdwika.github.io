@@ -72,3 +72,53 @@
 	color: white;
 	margin-top:50%;
 }
+
+.about-me{
+	position: fixed;
+	display: none;
+	margin-top: 10%;
+}
+
+.isi-about{
+	color: white;
+	font-family: 'Exo', sans-serif;
+}
+
+.deskripsi-about{
+	color: white;
+	font-family: 'Concert One', cursive;
+}
+
+.social{
+	margin-top: 5%;
+}
+
+.fa{
+	padding-right: 20px;
+}
+
+@media screen and (max-width: 500px) {
+	.about{
+		margin-top: 20px;
+		margin-left: 40%;
+		transform: rotate(0deg);
+	}
+
+	.close{
+		margin-top: 20px;
+		margin-left: 37%;
+		transform: rotate(0deg);
+	}
+
+	.about-me{
+		margin-top: 50%;
+	}
+
+	.social{
+		margin-top: 10%;
+	}
+
+	.aboutnav{
+		opacity: 1;
+	}
+}
