@@ -98,6 +98,9 @@
 }
 
 @media screen and (max-width: 500px) {
+	.splash-hello{
+		top:40%;
+	}
 	.about{
 		margin-top: 20px;
 		margin-left: 40%;
@@ -111,7 +114,7 @@
 	}
 
 	.about-me{
-		margin-top: 50%;
+		margin-top: 30%;
 	}
 
 	.social{
