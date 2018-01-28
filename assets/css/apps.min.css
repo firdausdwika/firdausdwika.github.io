@@ -11,6 +11,10 @@
     /*padding-top: 80px;*/
 }
 
+.profil{
+	width: 90%;
+}
+
 .splash{
 	background-color: white;
 	position: absolute;
@@ -101,6 +105,10 @@
 	.splash-hello{
 		top:40%;
 	}
+
+	.hello-home{
+		margin-top: 5%;
+	}
 	.about{
 		margin-top: 20px;
 		margin-left: 40%;
@@ -123,5 +131,10 @@
 
 	.aboutnav{
 		opacity: 1;
+	}
+
+	.profil{
+		width: 60%;
+		margin-left: 15%;
 	}
 }
