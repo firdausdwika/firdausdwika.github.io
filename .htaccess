@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^(work|about|contact)$ $1.php [L,NC]
+</IfModule>
