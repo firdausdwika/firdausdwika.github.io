@@ -1,6 +1,4 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
-  RewriteRule index\.html index.php
   RewriteRule ^(work|about|contact)$ $1.php [L,NC]
 </IfModule>
