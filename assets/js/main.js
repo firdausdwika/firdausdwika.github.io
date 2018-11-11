@@ -34,122 +34,251 @@ setTimeout(function(){
   $('body').showing();
 },1800);
 
-$(function () {
-      var load = function (url) {
-        $.get(url).done(function (data) {   
-          $("#content").html(data);
-        })
-      };
+$(document).on('click', '.about-text', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  var $rows = $('.row').addClass('h-25');
+  setTimeout(function() {
+    $rows.removeClass("h-100");          
+    $('body').removing();
+    $('#work').fadeOut('slow');
+    $('#contact').fadeOut('slow');
+    $('.work-text').removeClass('active-menu');
+    $('.contact-text').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+    $('#about').fadeIn('slow');
+    $('.about-text').addClass('active-menu');
+  },1500);
+});
+
+$(document).on('click', '.about-text-sm', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  var $rows = $('.row').addClass('h-25');
+  setTimeout(function() {
+    $rows.removeClass("h-100");          
+    $('body').removing();
+    $('#work').fadeOut('slow');
+    $('#contact').fadeOut('slow');
+    $('.work-text-sm').removeClass('active-menu');
+    $('.contact-text-sm').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+    $('#about').fadeIn('slow');
+    $('.about-text-sm').addClass('active-menu');
+  },1500);
+});
+
+$(document).on('click', '.work-text', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  var $rows = $('.row').addClass('h-25');
+  setTimeout(function() {
+    $rows.removeClass("h-100");          
+    $('body').removing();
+    $('#about').fadeOut('slow');
+    $('#contact').fadeOut('slow');
+    $('.about-text').removeClass('active-menu');
+    $('.contact-text').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+    $('#work').fadeIn('slow');
+    $('.work-text').addClass('active-menu');
+  },1500);
+});
+
+$(document).on('click', '.work-text-sm', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  var $rows = $('.row').addClass('h-25');
+  setTimeout(function() {
+    $rows.removeClass("h-100");          
+    $('body').removing();
+    $('#about').fadeOut('slow');
+    $('#contact').fadeOut('slow');
+    $('.about-text-sm').removeClass('active-menu');
+    $('.contact-text-sm').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+    $('#work').fadeIn('slow');
+    $('.work-text-sm').addClass('active-menu');
+  },1500);
+});
+
+$(document).on('click', '.contact-text', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  var $rows = $('.row').addClass('h-25');
+  setTimeout(function() {
+    $rows.removeClass("h-100");          
+    $('body').removing();
+    $('#work').fadeOut('slow');
+    $('#about').fadeOut('slow');
+    $('.work-text').removeClass('active-menu');
+    $('.about-text').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+    $('#contact').fadeIn('slow');
+    $('.contact-text').addClass('active-menu');
+  },1500);
+});
+
+$(document).on('click', '.contact-text-sm', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  var $rows = $('.row').addClass('h-25');
+  setTimeout(function() {
+    $rows.removeClass("h-100");          
+    $('body').removing();
+    $('#work').fadeOut('slow');
+    $('#about').fadeOut('slow');
+    $('.work-text-sm').removeClass('active-menu');
+    $('.about-text-sm').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+    $('#contact').fadeIn('slow');
+    $('.contact-text-sm').addClass('active-menu');
+  },1500);
+});
+
+$(document).on('click', '.person-name', function (e) {
+  $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+  setTimeout(function() {
+    var $rows = $('.row').addClass('h-100');
+    $rows.removeClass("h-25");          
+    $('body').removing();
+    $('#work').fadeOut('slow');
+    $('#about').fadeOut('slow');
+    $('#contact').fadeOut('slow');
+    $('.contact-text').removeClass('active-menu');
+    $('.work-text').removeClass('active-menu');
+    $('.about-text').removeClass('active-menu');
+    $('.contact-text-sm').removeClass('active-menu');
+    $('.work-text-sm').removeClass('active-menu');
+    $('.about-text-sm').removeClass('active-menu');
+  }, 100);
+  setTimeout(function(){
+    $('body').showing();
+  },1500);
+});
+
+// $(function () {
+//       var load = function (url) {
+//         $.get(url).done(function (data) {   
+//           $("#content").html(data);
+//         })
+//       };
       
-      $(document).on('click', 'div p a', function (e) {        
-        e.preventDefault();
-        //$(".slide-content").removeAttr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;').delay(300);
+//       $(document).on('click', 'div p a', function (e) {        
+//         e.preventDefault();
+//         //$(".slide-content").removeAttr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;').delay(300);
         
-        var $this = $(this),
-          url = $this.attr("href"),
-          title = $this.text();
+//         var $this = $(this),
+//           url = $this.attr("href"),
+//           title = $this.text();
         
-        history.pushState({
-          url: url,
-          title: title
-        }, title, url);
+//         history.pushState({
+//           url: url,
+//           title: title
+//         }, title, url);
 
-        document.title = title + ' - Firdaus Dwika';
-        $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
-        var $rows = $('.row').addClass('h-25');
-        setTimeout(function() {
-           $rows.removeClass("h-100");          
-           $('body').removing();
-       }, 100);
-        setTimeout(function(){
-          $('body').showing();
-        },1500);
-        load(url);
-      });
+//         document.title = title + ' - Firdaus Dwika';
+//         $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+//         var $rows = $('.row').addClass('h-25');
+//         setTimeout(function() {
+//            $rows.removeClass("h-100");          
+//            $('body').removing();
+//        }, 100);
+//         setTimeout(function(){
+//           $('body').showing();
+//         },1500);
+//         load(url);
+//       });
 
-      $(document).on('click', 'div span a', function (e) {      
-        e.preventDefault();
-        $("div span a").removeClass('active-menu');  
-        //$(".slide-content").removeAttr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;').delay(300);
+//       $(document).on('click', 'div span a', function (e) {      
+//         e.preventDefault();
+//         $("div span a").removeClass('active-menu');  
+//         //$(".slide-content").removeAttr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;').delay(300);
         
-        var $this = $(this),
-          url = $this.attr("href"),
-          title = $this.text();
+//         var $this = $(this),
+//           url = $this.attr("href"),
+//           title = $this.text();
         
-        history.pushState({
-          url: url,
-          title: title
-        }, title, url);
-        var url_menu = url + '-text-sm';
-        document.title = title + ' - Firdaus Dwika';
-        $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
-        var $rows = $('.row').addClass('h-25');
-        $("."+url_menu+" a").addClass('active-menu');
-        setTimeout(function() {
-           $rows.removeClass("h-100");          
-           $('body').removing();
-       }, 100);
-        setTimeout(function(){
-          $('body').showing();
-        },1500);
-        load(url);
-      });
+//         history.pushState({
+//           url: url,
+//           title: title
+//         }, title, url);
+//         var url_menu = url + '-text-sm';
+//         document.title = title + ' - Firdaus Dwika';
+//         $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+//         var $rows = $('.row').addClass('h-25');
+//         $("."+url_menu+" a").addClass('active-menu');
+//         setTimeout(function() {
+//            $rows.removeClass("h-100");          
+//            $('body').removing();
+//        }, 100);
+//         setTimeout(function(){
+//           $('body').showing();
+//         },1500);
+//         load(url);
+//       });
 
-      $(document).on('click', '.person-name', function (e) {
-        e.preventDefault();
+//       $(document).on('click', '.person-name', function (e) {
+//         e.preventDefault();
         
-        var $this = $(this),
-          url = window.location.origin+'/firdausdwika/',
-          title = $this.text();
+//         var $this = $(this),
+//           url = window.location.origin+'/firdausdwika/',
+//           title = $this.text();
         
-        history.pushState({
-          url: window.location.origin+'/firdausdwika/',
-          title: title
-        }, title, window.location.origin+'/firdausdwika/');
+//         history.pushState({
+//           url: window.location.origin+'/firdausdwika/',
+//           title: title
+//         }, title, window.location.origin+'/firdausdwika/');
 
-        $("#content").empty();
+//         $("#content").empty();
 
-        document.title = 'Firdaus Dwika';
-        $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
-        var $rows = $('.row').addClass('h-100');
-        setTimeout(function() {
-           $rows.removeClass("h-25");
-           $('body').removing();
-       }, 100);
-        setTimeout(function(){
-          $('body').showing();
-        },1800);
-        // load(url);
-        $("#content").empty();
-      });
+//         document.title = 'Firdaus Dwika';
+//         $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+//         var $rows = $('.row').addClass('h-100');
+//         setTimeout(function() {
+//            $rows.removeClass("h-25");
+//            $('body').removing();
+//        }, 100);
+//         setTimeout(function(){
+//           $('body').showing();
+//         },1800);
+//         // load(url);
+//         $("#content").empty();
+//       });
       
-      $(window).on('popstate', function (e) {
-        var state = e.originalEvent.state;
-        if (state !== null) {
-          $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
-          setTimeout(function() {
-            document.title = state.title;
-            load(state.url);
-             $('body').removing();
-         }, 100);
-          setTimeout(function(){
-          $('body').showing();
-        },1800);
-        } else {
-          $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
-          var $rows = $('.row').addClass('h-100');
-          setTimeout(function() {
-            document.title = 'Firdaus Dwika';
-            $("#content").empty();
-             $rows.removeClass("h-25");
-             $('body').removing();
-         }, 100);
-          setTimeout(function(){
-          $('body').showing();
-        },1800);
-        }
-      });
-    });
+//       $(window).on('popstate', function (e) {
+//         var state = e.originalEvent.state;
+//         if (state !== null) {
+//           $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+//           setTimeout(function() {
+//             document.title = state.title;
+//             load(state.url);
+//              $('body').removing();
+//          }, 100);
+//           setTimeout(function(){
+//           $('body').showing();
+//         },1800);
+//         } else {
+//           $(".slide-content").attr('style','-webkit-animation-name: slideshow;-webkit-animation-duration: 1s;animation-iteration-count: 2;animation-direction:alternate;');
+//           var $rows = $('.row').addClass('h-100');
+//           setTimeout(function() {
+//             document.title = 'Firdaus Dwika';
+//             $("#content").empty();
+//              $rows.removeClass("h-25");
+//              $('body').removing();
+//          }, 100);
+//           setTimeout(function(){
+//           $('body').showing();
+//         },1800);
+//         }
+//       });
+//     });
 
 // $("body").mousemove(function (event) {
 // 	tiltx = 1;
@@ -426,7 +555,7 @@ $(document).on('click', '#pos', function (e) {
           $('.sm-menu-apps').fadeIn('slow');
         }else{
           $('.sm-menu-pos').addClass('isactive');
-          $(".sm-menu-pos").attr('style','transform: translate(125%);z-index:10');
+          $(".sm-menu-pos").attr('style','transform: translate(125%);z-index:10;');
           $('#pos-sm').fadeIn('slow'); 
           $('.sm-menu-compro').fadeOut('slow');
           $('.sm-menu-apps').fadeOut('slow'); 

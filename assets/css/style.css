@@ -84,10 +84,12 @@ canvas {
 	font-size: 40px;
 	font-family: 'Ubuntu', sans-serif;	
 	transition: font-size 2s;
+	cursor: pointer;
 }
 
 .about-text:hover, .work-text:hover, .contact-text:hover{
 	font-size: 46px;	
+	color: #0E76A8;
 }
 
 .menu-sm{
@@ -239,9 +241,13 @@ canvas {
 	display: none;
 }
 
-#pos-sm, #compro-sm, #apps-sm, #pos-sm-menu, #compro-sm-menu, #apps-sm-menu{
+#pos-sm, #compro-sm, #apps-sm, #pos-sm-menu, #compro-sm-menu, #apps-sm-menu, #about, #work, #contact{
 	display: none;
 }
+
+.active-menu{
+		color: #0E76A8;
+	}
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 
 }
@@ -260,10 +266,6 @@ canvas {
 
 	.about-text-sm, .work-text-sm, .contact-text-sm{
 		cursor: pointer;
-	}
-
-	.active-menu{
-		color: #0E76A8;
 	}
 
 	.title-menu{
