@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  DirectoryIndex indexs.php
   RewriteRule ^(work|about|contact)$ $1.php [L,NC]
 </IfModule>
